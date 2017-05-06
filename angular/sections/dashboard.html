@@ -1,0 +1,27 @@
+<div class="row" ng-if="authenticated === true">
+<div class="two columns">&nbsp;</div>
+	<div class="eight columns" style="text-align:center;padding-top:16%">
+		<span style="font-size:1.5em;">Hi, Welcome to Dashboard</span>
+		<div>
+			<label for="username">Username</label>
+			<span style="font-size:1.5em;">{{info.username }}</span>
+
+			<label for="username">EmailId</label>
+			<span style="font-size:1.5em;">{{info.email }}</span>
+		</div>
+		<br>You can signout now</br>
+		<button class="button-primary" ng-click="signout()">Sign out</button>
+	</div>
+<div class="two columns">&nbsp;</div>
+</div>
+
+<div class="row" ng-if="!authenticated || authenticated === undefined">
+<div class="two columns">&nbsp;</div>
+	<div class="eight columns" style="text-align:center;padding-top:16%">
+		<span style="font-size:1.5em;">Hi,I believe you are trying to trespass</span>
+		<br>Please login!</br>
+		<button class="button-primary" ng-click="signin()">Signin</button>
+	</div>
+
+<div class="two columns">&nbsp;</div>
+</div>

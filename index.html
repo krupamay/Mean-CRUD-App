@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="krupa">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/skeleton.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/normalize.css"/>
+    <script src="./angular/app.js"></script>
+    <script src="./angular/sections/homepage.js"></script>
+    <script src="./angular/sections/dashboard.js"></script>
+    <script src="./angular/sections/signout.js"></script>
+    <script src="./angular/sections/signup.js"></script>
+
+</head>
+<body >
+    <!--<base href="/"/>-->
+    	<div ng-controller="appController"></div>
+        <ui-view></ui-view>
+</body>
+
+<script>
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "20%";
+    document.getElementById("main").style.marginLeft = "20%";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+</html>
